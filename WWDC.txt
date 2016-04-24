@@ -1,0 +1,22 @@
+1). 苹果近两年WWDC都发布了什么新技术
+
+	2014年
+	1. OSX 10.10 Yosemite 
+	2. iCloud Drive 网盘
+	3. ios8
+	4. HealthKit 收集健康信息，数据向第三方开发
+	5. 家庭共享功能，可以共享ios应用，音乐等
+	6. 发布新的sdk, 新增4000多个的API
+	7. 应用支持扩展，扩展给其它应用使用，通知预览界面支持添加第三方软件插件
+	8. 支持第三方键盘（ps：我终于不用越狱就可以用搜狗了）
+	9. Touch ID功能 向开发者开放
+	10. Swift语言
+
+	2015年
+	1. 发布OSX10.11 EI Capitan
+	2. ios9
+	3. Apply Pay 苹果支付
+	4. Car Play
+	4. Swift2.0 开源 
+	5. watchOS
+	6. Apple music
