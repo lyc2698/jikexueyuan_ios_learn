@@ -35,8 +35,12 @@ public class GirlFriend {
         }
     }
     
-    public func haveAnAppointment() -> String{
-      return "年龄为\(_age)的\(_name)可约会"
+    public func haveAnAppointment() -> String {
+      return "我可约"
+    }
+    
+    public func toString() -> String {
+        return "名字: \(name), 年龄: \(age), \(haveAnAppointment())"
     }
     
 }
