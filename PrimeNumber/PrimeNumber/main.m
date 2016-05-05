@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
             int32_t flag = 0;
             
             //不能被小于它的平方根的所有数字整除
-            for (int32_t j = 2; j < (int)sqrt(i); j++) {
+            for (int32_t j = 2; j <= (int)sqrt(i); j++) {
                 //如果能被整除, 标识为1
                 if (i % j == 0) {
                     flag = 1;
