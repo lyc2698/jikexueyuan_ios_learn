@@ -52,6 +52,21 @@ Node *reverseNode(Node *first){
     return newFirst;
 }
 
+
+/**
+ * 释放内存
+ */
+void freeNode(Node *first){
+    Node *node = first;
+    Node *tmp = NULL;
+    
+    while (node != NULL) {
+        tmp = node;
+        node = node->next;
+        free(tmp);
+    }
+}
+
 /**
  * 打印
  */
@@ -63,14 +78,18 @@ void printList(Node *node) {
 }
 
 
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Node *current = createNode();
         printList(current);
+        
         printf("反转链表\n");
         Node *new = reverseNode(current);
         printList(new);
+        
+        freeNode(current);
         
     }
     return 0;
