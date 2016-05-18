@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Array.h"
 #include "Object.h"
-#include "Integer.h"
 #include "Student.h"
 
-
+/** 创建8个学生元素并加入数组. */
 void Create8Student(Array *arr){
     Student *student0 = StudentNew(20, "小明");
     ArrayAdd(arr, (Object *) student0);
@@ -40,6 +39,7 @@ void Create8Student(Array *arr){
     OBJECT_RELEASE(student8);
 }
 
+/** 打印学生数组. */
 void printStudentArray(Array *studentArray){
     for (int j = 0; j < ArrayGetLength(studentArray); j++) {
         printf("位置: %d, 名字: %s, 年龄: %d\n",
@@ -50,6 +50,7 @@ void printStudentArray(Array *studentArray){
     printf("\n");
 }
 
+/** 打印学生元素. */
 void printStudent(Student *student){
     printf("他是: %s, 年龄: %d\n",
            StudentGetName(student),
@@ -58,53 +59,6 @@ void printStudent(Student *student){
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
-//        Integer *i = IntegerNew(32);
-//        printf("%d\n", IntegerGet(i));
-//        OBJECT_RELEASE(i);
-        
-//        Object *obj = malloc(sizeof(Object));
-//        ObjectRetain(obj);
-//        ObjectRelease(obj);
-        
-//        Array *arr = ArrayCreate();
-//        for (int i = 0; i < 100; i++) {
-//            ArrayAdd(arr, "Hello World");
-//        }
-//        
-//        for (int j = 0; j < ArrayGetLength(arr); j++) {
-//            printf("%s\n", ArrayGet(arr, j));
-//        }
-//        
-//        ArrayDestory(arr);
-        
-        
-//        Array *arr = ArrayCreate();
-
-//        printf("Retain count %d\n", OBJECT_RETAIN_COUNT(intValue));
-//        OBJECT_RELEASE(intValue);
-//        printf("Retain count %d\n", OBJECT_RETAIN_COUNT(intValue));
-//        
-//        printf("%d\n", IntegerGet((Integer *)ArrayGet(arr, 0)));
-//        
-//        ArrayRemoveAt(arr, 0);
-        
-//        Integer *intValue;
-//        for (int i = 0; i < 10; i++) {
-//            intValue = IntegerNew(i);
-//            ArrayAdd(arr, (Object *)intValue);
-//            OBJECT_RELEASE(intValue);
-//        }
-//        Integer *int1 = IntegerNew(1);
-//        ArrayAdd(arr, (Object *)int1);
-//        OBJECT_RELEASE(int1);
-//        Integer *int2 = IntegerNew(2);
-//        ArrayAdd(arr, (Object *)int2);
-//        OBJECT_RELEASE(int2);
-//        
-//        for (int j = 0; j < ArrayGetLength(arr); j++) {
-//            printf("%d\n", IntegerGet((Integer *)ArrayGet(arr, j)));
-//        }
         
         Array *studentArray = ArrayCreate();
         
@@ -128,9 +82,6 @@ int main(int argc, const char * argv[]) {
         
         printf("把数组销毁\n");
         ArrayDestory(studentArray);
-        
-        
-        
         
     }
     return 0;

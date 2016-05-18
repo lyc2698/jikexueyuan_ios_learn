@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		843EE0321CEB64FF00CDD899 /* Array.c in Sources */ = {isa = PBXBuildFile; fileRef = 843EE0301CEB64FF00CDD899 /* Array.c */; };
 		843EE0351CEB70CA00CDD899 /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = 843EE0331CEB70CA00CDD899 /* Object.c */; };
-		843EE0381CEB75D800CDD899 /* Integer.c in Sources */ = {isa = PBXBuildFile; fileRef = 843EE0361CEB75D800CDD899 /* Integer.c */; };
 		843EE03B1CEB86A400CDD899 /* Student.c in Sources */ = {isa = PBXBuildFile; fileRef = 843EE0391CEB86A400CDD899 /* Student.c */; };
 		847C826B1CE8DAD10062F0CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847C826A1CE8DAD10062F0CA /* main.m */; };
 /* End PBXBuildFile section */
@@ -31,8 +30,6 @@
 		843EE0311CEB64FF00CDD899 /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 		843EE0331CEB70CA00CDD899 /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
 		843EE0341CEB70CA00CDD899 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		843EE0361CEB75D800CDD899 /* Integer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Integer.c; sourceTree = "<group>"; };
-		843EE0371CEB75D800CDD899 /* Integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Integer.h; sourceTree = "<group>"; };
 		843EE0391CEB86A400CDD899 /* Student.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Student.c; sourceTree = "<group>"; };
 		843EE03A1CEB86A400CDD899 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		847C82671CE8DAD10062F0CA /* DynamicArray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DynamicArray; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,8 +71,6 @@
 				843EE03A1CEB86A400CDD899 /* Student.h */,
 				843EE0331CEB70CA00CDD899 /* Object.c */,
 				843EE0341CEB70CA00CDD899 /* Object.h */,
-				843EE0361CEB75D800CDD899 /* Integer.c */,
-				843EE0371CEB75D800CDD899 /* Integer.h */,
 				843EE0301CEB64FF00CDD899 /* Array.c */,
 				843EE0311CEB64FF00CDD899 /* Array.h */,
 			);
@@ -138,7 +133,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843EE0381CEB75D800CDD899 /* Integer.c in Sources */,
 				847C826B1CE8DAD10062F0CA /* main.m in Sources */,
 				843EE03B1CEB86A400CDD899 /* Student.c in Sources */,
 				843EE0351CEB70CA00CDD899 /* Object.c in Sources */,
