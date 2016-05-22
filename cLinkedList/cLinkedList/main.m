@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef struct NOde_{
+typedef struct Node_{
     int value;
     struct Node_ *next;
     struct NOde_ *pre;
