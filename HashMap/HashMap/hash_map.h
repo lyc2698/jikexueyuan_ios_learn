@@ -20,6 +20,10 @@ typedef struct HashMap_ {
     Node **table;        //单链表
 } HashMap;
 
+
+/** 获取 hashCode 值. */
+int hashGetHashCode(HashMap *hashMap, char *key);
+
 /** 创建 hashMap. */
 HashMap *hashMapCreate();
 
@@ -37,9 +41,6 @@ void hashMapDestory(HashMap *hashMap);
 
 /** 打印hashMap. */
 void hashMapPrint(HashMap *hashMap);
-
-/** 获取 hashCode 值. */
-int hashGetHashCode(HashMap *hashMap, char *key);
 
 
 #endif /* hash_map_h */

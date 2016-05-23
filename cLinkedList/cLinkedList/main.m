@@ -11,7 +11,7 @@
 typedef struct Node_{
     int value;
     struct Node_ *next;
-    struct NOde_ *pre;
+    struct Node_ *pre;
 } Node;
 
 

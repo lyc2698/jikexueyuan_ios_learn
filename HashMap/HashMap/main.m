@@ -16,11 +16,26 @@ int main(int argc, const char * argv[]) {
         Node *node1 = nodeCreate("name", "小明");
         Node *node2 = nodeCreate("age", "18");
         
+        //添加
+        printf("\n添加:\n");
         hashMapPut(hashMap, node1);
         hashMapPut(hashMap, node2);
         hashMapPrint(hashMap);
         
-        printf("sss");
+        //删除
+        printf("\n删除:\n");
+        hashMapRemove(hashMap, "age");
+        hashMapPrint(hashMap);
+        
+        //查询
+        printf("\n查询:\n");
+        hashMapGet(hashMap, "age");
+        hashMapPrint(hashMap);
+        
+        //销毁
+        printf("\n销毁:\n");
+        hashMapDestory(hashMap);
+        hashMapPrint(hashMap);
     }
     return 0;
 }
