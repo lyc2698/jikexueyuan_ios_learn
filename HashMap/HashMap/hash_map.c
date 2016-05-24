@@ -20,7 +20,7 @@ int hashGetHashCode(HashMap *hashMap, char *key){
 /** 创建 hashMap. */
 HashMap *hashMapCreate(){
     HashMap *hashMap = malloc(sizeof(HashMap));
-    hashMap->capacity_ = 512;
+    hashMap->capacity_ = 128;
     hashMap->load_factor_ = 0.75;
     hashMap->size_ = 0;
     hashMap->table = (Node **)malloc(sizeof(Node) * hashMap->capacity_);
@@ -33,20 +33,26 @@ void hashMapPut(HashMap *hashMap, Node *node){
     Node *oldNode = hashMap->table[index];
     
     // 如果这个key在map中不存在，则插入到当前index中的头节点，同样返回null
-    if (hashMap->table[index] == NULL) {
-        node->next = oldNode;
+    if (oldNode == NULL) {
         hashMap->size_++;
 
         if (index >= hashMap->capacity_ * hashMap->load_factor_) {
-            hashMap->capacity_ *= 2;
+            hashMapResize(hashMap);
+        }
+        
+        hashMap->table[index] = node;
+    }else{
+       //遍历链表判断是否有这个 key, 如果有, 更新 value(如果 index 存在, 则 key 一定存在链表中)
+        while (oldNode != NULL) {
+            if (oldNode->key == node->key) {
+                oldNode->value = node->value;
+                break;
+            }
             
-            Node **oldNodes = hashMap->table;
-            memcpy(hashMap->table, oldNodes, sizeof(Node) * hashMap->capacity_);
-            free(oldNodes);
+            oldNode = oldNode->next;
         }
     }
     
-    hashMap->table[index] = node;
 }
 
 /** 移除元素. */
@@ -60,26 +66,21 @@ void hashMapRemove(HashMap *hashMap, char *key){
         return ;
     }
     
-    //遍历链表(有该 key 则删除)
-    Node *head = node;
-    Node *delNode = NULL;
-    while (node->key != key && node != NULL) {
-        delNode = node;
-        node = node->next;
+    for (Node* it = node,*prev = node; it != NULL;prev = it,it = it->next) {
+        
+        if (it->key == key) {
+            // 目标节点的下一个节点不为null
+            if (it->next) {
+                *it = *(it->next);
+                printf("removed\n");
+            }else {
+                // 目标节点是最后一个节点
+                prev->next = NULL;
+                printf("removed last\n");
+            }
+            break;
+        }
     }
-    
-    if (node->key != key) {
-        printf("链表里没有这个 key\n");
-    }
-    
-    if (node == head) {
-        head = node->next;
-    }else{
-        delNode->next = node->next;
-    }
-    
-    free(node);
-    node = NULL;
 
 }
 
@@ -109,8 +110,6 @@ void hashMapDestory(HashMap *hashMap){
                 Node *temp = node;
                 free(temp);
             }
-            //销毁 table
-            free(hashMap->table[i]);
         }
     }
     
@@ -121,13 +120,23 @@ void hashMapDestory(HashMap *hashMap){
 
 /** 打印hashMap. */
 void hashMapPrint(HashMap *hashMap){
+    printf("当前hashMap内容:\n");
     for (int i = 0; i < (hashMap->capacity_ * hashMap->load_factor_); i++) {
         if (hashMap->table[i] != NULL) {
             for (Node *node = hashMap->table[i]; node != NULL; node = node ->next) {
-                printf("当前hashMap内容: %s:%s\n", node->key, node->value);
+                 printf("%s:%s ", node->key, node->value);
             }
         }
     }
+    printf("\n");
+}
+
+/** 调整hashMap大小. */
+void hashMapResize(HashMap *hashMap){
+    Node **oldNodes = hashMap->table;
+    hashMap->capacity_ *= 2;
+    memcpy(hashMap->table, oldNodes, sizeof(Node) * hashMap->capacity_);
+    free(oldNodes);
 }
 
 

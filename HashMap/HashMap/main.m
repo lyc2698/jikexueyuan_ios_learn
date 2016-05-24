@@ -29,13 +29,12 @@ int main(int argc, const char * argv[]) {
         
         //查询
         printf("\n查询:\n");
-        hashMapGet(hashMap, "age");
+        hashMapGet(hashMap, "name");
         hashMapPrint(hashMap);
         
         //销毁
         printf("\n销毁:\n");
         hashMapDestory(hashMap);
-        hashMapPrint(hashMap);
     }
     return 0;
 }

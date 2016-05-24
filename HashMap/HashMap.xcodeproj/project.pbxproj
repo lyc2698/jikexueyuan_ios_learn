@@ -251,6 +251,7 @@
 				8452CF361CF1FF1900C56B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

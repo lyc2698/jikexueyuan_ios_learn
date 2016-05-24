@@ -42,5 +42,7 @@ void hashMapDestory(HashMap *hashMap);
 /** 打印hashMap. */
 void hashMapPrint(HashMap *hashMap);
 
+/** 调整hashMap大小. */
+void hashMapResize(HashMap *hashMap);
 
 #endif /* hash_map_h */
