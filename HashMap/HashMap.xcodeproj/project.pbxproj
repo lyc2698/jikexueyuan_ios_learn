@@ -10,6 +10,7 @@
 		8452CF311CF1FF1900C56B46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8452CF301CF1FF1900C56B46 /* main.m */; };
 		8452CF3C1CF1FFB100C56B46 /* hash_map.c in Sources */ = {isa = PBXBuildFile; fileRef = 8452CF3A1CF1FFB100C56B46 /* hash_map.c */; };
 		8452CF3F1CF1FFC000C56B46 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 8452CF3D1CF1FFC000C56B46 /* node.c */; };
+		846018471CF6098D00E561B9 /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = 846018451CF6098D00E561B9 /* Object.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		8452CF3B1CF1FFB100C56B46 /* hash_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map.h; sourceTree = "<group>"; };
 		8452CF3D1CF1FFC000C56B46 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = node.c; sourceTree = "<group>"; };
 		8452CF3E1CF1FFC000C56B46 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		846018451CF6098D00E561B9 /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
+		846018461CF6098D00E561B9 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				8452CF3B1CF1FFB100C56B46 /* hash_map.h */,
 				8452CF3D1CF1FFC000C56B46 /* node.c */,
 				8452CF3E1CF1FFC000C56B46 /* node.h */,
+				846018451CF6098D00E561B9 /* Object.c */,
+				846018461CF6098D00E561B9 /* Object.h */,
 			);
 			path = HashMap;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846018471CF6098D00E561B9 /* Object.c in Sources */,
 				8452CF3C1CF1FFB100C56B46 /* hash_map.c in Sources */,
 				8452CF311CF1FF1900C56B46 /* main.m in Sources */,
 				8452CF3F1CF1FFC000C56B46 /* node.c in Sources */,

@@ -9,8 +9,10 @@
 #include "node.h"
 #include <stdlib.h>
 
-Node *nodeCreate(char *key, char *value){
+/** 创建链表. */
+Node *nodeCreate(char *key, AnyPointer value){
     Node *node = malloc(sizeof(Node));
+    OBJECT_RETAIN(node);
     node->key = key;
     node->value = value;
     node->next = NULL;
@@ -18,6 +20,7 @@ Node *nodeCreate(char *key, char *value){
     return node;
 }
 
+/** hashCode 算法. */
 unsigned int BKDRHash(char *str){
     unsigned int seed = 131; // 31 131 1313 13131 131313 etc..
     unsigned int hash = 0;

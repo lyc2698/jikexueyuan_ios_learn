@@ -41,6 +41,7 @@ void hashMapPut(HashMap *hashMap, Node *node){
         }
         
         hashMap->table[index] = node;
+        OBJECT_RETAIN(node);
     }else{
        //遍历链表判断是否有这个 key, 如果有, 更新 value(如果 index 存在, 则 key 一定存在链表中)
         while (oldNode != NULL) {
@@ -66,20 +67,30 @@ void hashMapRemove(HashMap *hashMap, char *key){
         return ;
     }
     
-    for (Node* it = node,*prev = node; it != NULL;prev = it,it = it->next) {
-        
-        if (it->key == key) {
-            // 目标节点的下一个节点不为null
-            if (it->next) {
-                *it = *(it->next);
-                printf("removed\n");
-            }else {
-                // 目标节点是最后一个节点
-                prev->next = NULL;
-                printf("removed last\n");
+    //要删除的是头结点，那么直接head = NULL;
+    if (node->key == key) {
+        hashMap->table[index] = NULL;
+        OBJECT_RELEASE(node);
+    }else{
+    
+        for (Node* it = node,*prev = node; it != NULL;prev = it,it = it->next) {
+            
+            if (it->key == key) {
+                // 目标节点的下一个节点不为null
+                if (it->next) {
+                    *it = *(it->next);
+                    printf("removed\n");
+                    OBJECT_RELEASE(it);
+                }else {
+                    // 目标节点是最后一个节点
+                    prev->next = NULL;
+                    printf("removed last\n");
+                    OBJECT_RELEASE(it);
+                }
+                break;
             }
-            break;
         }
+
     }
 
 }
