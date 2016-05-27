@@ -7,20 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface Hello : NSObject
-
--(void)sayHello;
-
-@end
-
-@implementation Hello
-
--(void)sayHello{
-     NSLog(@"Hello, World!");
-}
-
-@end
+#import "Hello.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -28,6 +15,10 @@ int main(int argc, const char * argv[]) {
         
         Hello *h = [[Hello alloc] init];
         [h sayHello];
+        
+        [Hello staticSayHello];
+        
+        [h sayHelloTo:@"zhangsan" theOther:@"lisi"];
        
     }
     return 0;
