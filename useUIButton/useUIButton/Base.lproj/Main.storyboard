@@ -17,21 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3P-gy-v3Z">
-                                <rect key="frame" x="50" y="50" width="70" height="50"/>
-                                <state key="normal" title="默认" image="1.png"/>
-                                <state key="highlighted" title="高亮" image="2.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6my-oJ-fj0">
+                                <rect key="frame" x="10" y="50" width="150" height="60"/>
+                                <inset key="titleEdgeInsets" minX="-350" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="内容" image="1.jpg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSw-MC-dlT">
+                                <rect key="frame" x="55" y="375" width="105" height="30"/>
+                                <state key="normal" title="设置选中的图片"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBD-rK-syW">
+                                <rect key="frame" x="55" y="472" width="105" height="30"/>
+                                <state key="normal" title="设置普通的图片"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAN-ju-QWv">
+                                <rect key="frame" x="84" y="226" width="150" height="60"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6k-HT-VSm">
+                                <rect key="frame" x="55" y="427" width="105" height="30"/>
+                                <state key="normal" title="设置禁用的图片"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="disableBtn" destination="s6k-HT-VSm" id="LeN-LB-Hzg"/>
+                        <outlet property="myBtn" destination="FAN-ju-QWv" id="R3z-40-ae9"/>
+                        <outlet property="normalBtn" destination="MBD-rK-syW" id="t66-gz-s8V"/>
+                        <outlet property="selectBtn" destination="DSw-MC-dlT" id="OUd-DD-z4N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="372" y="324"/>
         </scene>
     </scenes>
     <resources>
-        <image name="1.png" width="456" height="412"/>
-        <image name="2.png" width="410" height="408"/>
+        <image name="1.jpg" width="250" height="124"/>
     </resources>
 </document>
