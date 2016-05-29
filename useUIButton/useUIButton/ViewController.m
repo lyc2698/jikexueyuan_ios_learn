@@ -23,6 +23,14 @@
     [super viewDidLoad];
     
     //创建按钮
+    [self setupButton];
+    //设置按钮
+    [self configButton];
+}
+
+/** 创建按钮. */
+-(void)setupButton {
+    //创建按钮
     UIButton *btn = [[UIButton alloc]init];
     //设置位置
     btn.frame = CGRectMake(10, 50, 150, 60);
@@ -39,8 +47,10 @@
     [btn setTitleEdgeInsets:UIEdgeInsetsMake(0, -350, 0, 0)];
     //添加视图
     [self.view addSubview:btn];
-    
-    /** 按钮操作. */
+}
+
+/** 设置按钮. */
+-(void)configButton {
     //设置选中状态时候的图片
     [self.selectBtn addTarget:self action:@selector(selectBtn:) forControlEvents:UIControlEventTouchUpInside];
     //设置禁用状态时候的图片
@@ -48,7 +58,6 @@
     //设置普通状态时候的图片
     [self.normalBtn addTarget:self action:@selector(normalBtn:) forControlEvents:UIControlEventTouchUpInside];
 }
-
 
 /** 设置选中状态时候的图片. */
 - (void)selectBtn:(UIButton*)btn {
