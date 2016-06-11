@@ -33,14 +33,12 @@
     [super viewDidLoad];
     
     [self showCurrentPage:0];
-    self.btnBack;
-    self.btnNext;
 }
 
 #pragma mark 创建标题 label
 -(UILabel*)titleLabel {
     if (_titleLabel == nil) {
-        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 100, 200, 30)];
+        _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(60, 80, 200, 30)];
         _titleLabel.backgroundColor = [UIColor redColor];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:_titleLabel];
@@ -51,9 +49,9 @@
 #pragma mark 创建 imageView
 -(UIImageView*)imageView {
     if (_imageView == nil) {
-        _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(60, 120, 200, 260)];
+        _imageView = [[UIImageView alloc]initWithFrame:CGRectMake(60, 135, 200, 260)];
         _imageView.backgroundColor = [UIColor blueColor];
-        _imageView.center = self.view.center;
+//        _imageView.center = self.view.center;
         [self.view addSubview:_imageView];
     }
     return _imageView;
@@ -62,7 +60,7 @@
 #pragma mark 创建"上一张"按钮
 -(UIButton*)btnBack {
     if (_btnBack == nil) {
-        _btnBack = [[UIButton alloc]initWithFrame:CGRectMake(60, 440, 80, 40)];
+        _btnBack = [[UIButton alloc]initWithFrame:CGRectMake(60, 420, 80, 40)];
         _btnBack.backgroundColor = [UIColor blueColor];
         [_btnBack setTitle:@"上一张" forState: UIControlStateNormal];
         [_btnBack addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
@@ -74,7 +72,7 @@
 #pragma mark 创建"下一张"按钮
 -(UIButton*)btnNext {
     if (!_btnNext) {
-        _btnNext = [[UIButton alloc]initWithFrame:CGRectMake(180, 440, 80, 40)];
+        _btnNext = [[UIButton alloc]initWithFrame:CGRectMake(180, 420, 80, 40)];
         _btnNext.backgroundColor = [UIColor blueColor];
         [_btnNext setTitle:@"下一张" forState: UIControlStateNormal];
         [_btnNext addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
@@ -110,7 +108,7 @@
         singerModel*model = self.arrayAll[iPage];
         
         //标题文字
-        NSString*strTitle = [NSString stringWithFormat:@"%@ %d/%d", model.name, iPage + 1, self.arrayAll.count];
+        NSString*strTitle = [NSString stringWithFormat:@"%@ %d/%ld", model.name, iPage + 1, self.arrayAll.count];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.text = strTitle;
         
