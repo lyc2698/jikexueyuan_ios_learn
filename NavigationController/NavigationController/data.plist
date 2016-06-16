@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>爱唱 ktv</string>
+		<key>price</key>
+		<string>68</string>
+		<key>pic</key>
+		<string>1.jpg</string>
+		<key>hasSell</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>麦乐迪ktv</string>
+		<key>price</key>
+		<string>38</string>
+		<key>pic</key>
+		<string>2.jpg</string>
+		<key>hasSell</key>
+		<string>11</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>台北音悦汇时尚</string>
+		<key>price</key>
+		<string>18</string>
+		<key>pic</key>
+		<string>3.jpg</string>
+		<key>hasSell</key>
+		<string>51</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>普乐迪</string>
+		<key>price</key>
+		<string>58</string>
+		<key>pic</key>
+		<string>4.jpg</string>
+		<key>hasSell</key>
+		<string>57</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>亮点主题量贩</string>
+		<key>price</key>
+		<string>48</string>
+		<key>pic</key>
+		<string>5.jpg</string>
+		<key>hasSell</key>
+		<string>59</string>
+	</dict>
+</array>
+</plist>

@@ -1,22 +1,28 @@
 //
 //  ViewController.swift
-//  meituan
+//  TableView
 //
-//  Created by admin on 16/6/12.
+//  Created by admin on 16/6/17.
 //  Copyright © 2016年 yicheng. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var listView: UITableView!
     private let TAG_TITLE = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myTableView.dataSource = self
+        listView.dataSource = self
+        listView.delegate = self
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -27,7 +33,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         return 10
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
         let label = cell.viewWithTag(TAG_TITLE) as! UILabel
@@ -35,6 +43,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Row \(indexPath.row) clicked")
+    }
+    
 
 
 }
