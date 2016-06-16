@@ -41,11 +41,10 @@ class RootTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
 
-        // Configure the cell...
         let itemDict = dataSource.objectAtIndex(indexPath.row) as! NSDictionary
         let item = Item(dict: itemDict as! [String : AnyObject])
         
-        (cell.viewWithTag(1) as! UIImageView).image = UIImage(named: "1")
+        (cell.viewWithTag(1) as! UIImageView).image = UIImage(named: item.pic)
         (cell.viewWithTag(2) as! UILabel).text = item.name
         (cell.viewWithTag(3) as! UILabel).text = item.price
         (cell.viewWithTag(4) as! UILabel).text = item.hasSell

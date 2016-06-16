@@ -8,7 +8,7 @@
 		<key>price</key>
 		<string>68</string>
 		<key>pic</key>
-		<string>1.jpg</string>
+		<string>1</string>
 		<key>hasSell</key>
 		<string>11</string>
 	</dict>
@@ -18,7 +18,7 @@
 		<key>price</key>
 		<string>38</string>
 		<key>pic</key>
-		<string>2.jpg</string>
+		<string>2</string>
 		<key>hasSell</key>
 		<string>11</string>
 	</dict>
@@ -28,7 +28,7 @@
 		<key>price</key>
 		<string>18</string>
 		<key>pic</key>
-		<string>3.jpg</string>
+		<string>3</string>
 		<key>hasSell</key>
 		<string>51</string>
 	</dict>
@@ -38,7 +38,7 @@
 		<key>price</key>
 		<string>58</string>
 		<key>pic</key>
-		<string>4.jpg</string>
+		<string>1</string>
 		<key>hasSell</key>
 		<string>57</string>
 	</dict>
@@ -48,7 +48,7 @@
 		<key>price</key>
 		<string>48</string>
 		<key>pic</key>
-		<string>5.jpg</string>
+		<string>2</string>
 		<key>hasSell</key>
 		<string>59</string>
 	</dict>
