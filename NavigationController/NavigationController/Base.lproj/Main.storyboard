@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--导航-->
+        <!--ktv-->
         <scene sceneID="ONj-Mb-Wvz">
             <objects>
                 <tableViewController id="c8q-jR-NhZ" customClass="RootTableViewController" customModule="NavigationController" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                             <outlet property="delegate" destination="c8q-jR-NhZ" id="odp-Lb-LLm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="导航" id="T8k-Ml-1Fq"/>
+                    <navigationItem key="navigationItem" title="ktv" id="T8k-Ml-1Fq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ej2-mZ-eOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,6 +87,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2" width="500" height="750"/>
+        <image name="2" width="470" height="285"/>
     </resources>
 </document>
