@@ -32,17 +32,6 @@ class ViewController: UIViewController {
 
     }
     
-    func showSuccessAlert() {
-        let alertController = UIAlertController(title: "保存成功",
-                                                message: "图片已保存",
-                                                preferredStyle: .Alert)
-        let action = UIAlertAction(title: "好",
-                                   style: UIAlertActionStyle.Default,
-                                   handler: nil)
-        alertController.addAction(action)
-//        presentedViewController(alertController, animated: true, completion: nil)
-    }
-    
     
 
 }
