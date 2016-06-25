@@ -34,7 +34,7 @@
                                     <action selector="btnSave:" destination="1LC-OH-qoJ" eventType="touchUpInside" id="abV-5Q-kKC"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7yW-zG-dYZ">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="7yW-zG-dYZ">
                                 <rect key="frame" x="58" y="560" width="104" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="9w2-8q-ueE"/>
@@ -45,6 +45,9 @@
                                         <exclude reference="rjd-MU-Sg4"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="changeLineWith:" destination="1LC-OH-qoJ" eventType="valueChanged" id="e4y-Sd-EFm"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24r-gv-Y9F">
                                 <rect key="frame" x="510" y="560" width="30" height="30"/>
@@ -80,6 +83,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="jwR-1a-BpL" id="yrp-rK-wmY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yj-yU-qI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

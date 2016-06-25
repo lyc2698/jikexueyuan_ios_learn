@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var boardView = BoardView()
+    
+    @IBOutlet weak var boardView: BoardView!
     
     //保存按钮操作
     @IBAction func btnSave(sender: AnyObject) {
@@ -21,10 +22,25 @@ class ViewController: UIViewController {
         boardView.clear()
     }
     
+    //修改线条大小
+    @IBAction func changeLineWith(sender: AnyObject) {
+        boardView.changeLineWith(sender.value)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func showSuccessAlert() {
+        let alertController = UIAlertController(title: "保存成功",
+                                                message: "图片已保存",
+                                                preferredStyle: .Alert)
+        let action = UIAlertAction(title: "好",
+                                   style: UIAlertActionStyle.Default,
+                                   handler: nil)
+        alertController.addAction(action)
+//        presentedViewController(alertController, animated: true, completion: nil)
     }
     
     
