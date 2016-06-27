@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //下载进度
-        appDownload.progress = 0.05
+        appDownload.progress = 0.1
         
     }
 
