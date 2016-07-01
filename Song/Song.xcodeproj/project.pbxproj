@@ -15,6 +15,7 @@
 		847695CC1D25722500D55935 /* SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847695CB1D25722500D55935 /* SongTests.swift */; };
 		847695D71D25722500D55935 /* SongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847695D61D25722500D55935 /* SongUITests.swift */; };
 		847695E61D25723500D55935 /* yy.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 847695E41D25723500D55935 /* yy.lrc */; };
+		84DD5B6F1D26B67A002842EE /* Lrc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD5B6E1D26B67A002842EE /* Lrc.swift */; };
 		84FF38811D2598CE0027BB21 /* yy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FF38801D2598CE0027BB21 /* yy.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		847695D61D25722500D55935 /* SongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUITests.swift; sourceTree = "<group>"; };
 		847695D81D25722500D55935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847695E41D25723500D55935 /* yy.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yy.lrc; sourceTree = "<group>"; };
+		84DD5B6E1D26B67A002842EE /* Lrc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lrc.swift; sourceTree = "<group>"; };
 		84FF38801D2598CE0027BB21 /* yy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yy.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,10 +105,10 @@
 			children = (
 				847695B61D25722500D55935 /* AppDelegate.swift */,
 				847695B81D25722500D55935 /* ViewController.swift */,
+				84DD5B6E1D26B67A002842EE /* Lrc.swift */,
 				847695BA1D25722500D55935 /* Main.storyboard */,
 				847695BD1D25722500D55935 /* Assets.xcassets */,
-				847695E41D25723500D55935 /* yy.lrc */,
-				84FF38801D2598CE0027BB21 /* yy.mp3 */,
+				84DD5B6D1D26B650002842EE /* resources */,
 				847695BF1D25722500D55935 /* LaunchScreen.storyboard */,
 				847695C21D25722500D55935 /* Info.plist */,
 			);
@@ -129,6 +131,15 @@
 				847695D81D25722500D55935 /* Info.plist */,
 			);
 			path = SongUITests;
+			sourceTree = "<group>";
+		};
+		84DD5B6D1D26B650002842EE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				847695E41D25723500D55935 /* yy.lrc */,
+				84FF38801D2598CE0027BB21 /* yy.mp3 */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			files = (
 				847695B91D25722500D55935 /* ViewController.swift in Sources */,
 				847695B71D25722500D55935 /* AppDelegate.swift in Sources */,
+				84DD5B6F1D26B67A002842EE /* Lrc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
