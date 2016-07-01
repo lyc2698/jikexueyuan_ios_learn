@@ -15,7 +15,7 @@
 		847695CC1D25722500D55935 /* SongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847695CB1D25722500D55935 /* SongTests.swift */; };
 		847695D71D25722500D55935 /* SongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847695D61D25722500D55935 /* SongUITests.swift */; };
 		847695E61D25723500D55935 /* yy.lrc in Resources */ = {isa = PBXBuildFile; fileRef = 847695E41D25723500D55935 /* yy.lrc */; };
-		847695E71D25723500D55935 /* yy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 847695E51D25723500D55935 /* yy.mp3 */; };
+		84FF38811D2598CE0027BB21 /* yy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FF38801D2598CE0027BB21 /* yy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		847695D61D25722500D55935 /* SongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongUITests.swift; sourceTree = "<group>"; };
 		847695D81D25722500D55935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847695E41D25723500D55935 /* yy.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yy.lrc; sourceTree = "<group>"; };
-		847695E51D25723500D55935 /* yy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yy.mp3; sourceTree = "<group>"; };
+		84FF38801D2598CE0027BB21 /* yy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yy.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 				847695BA1D25722500D55935 /* Main.storyboard */,
 				847695BD1D25722500D55935 /* Assets.xcassets */,
 				847695E41D25723500D55935 /* yy.lrc */,
-				847695E51D25723500D55935 /* yy.mp3 */,
+				84FF38801D2598CE0027BB21 /* yy.mp3 */,
 				847695BF1D25722500D55935 /* LaunchScreen.storyboard */,
 				847695C21D25722500D55935 /* Info.plist */,
 			);
@@ -238,11 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847695E71D25723500D55935 /* yy.mp3 in Resources */,
 				847695C11D25722500D55935 /* LaunchScreen.storyboard in Resources */,
 				847695BE1D25722500D55935 /* Assets.xcassets in Resources */,
 				847695BC1D25722500D55935 /* Main.storyboard in Resources */,
 				847695E61D25723500D55935 /* yy.lrc in Resources */,
+				84FF38811D2598CE0027BB21 /* yy.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Song/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.Song;
@@ -421,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Song/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lly.Song;
@@ -493,6 +495,7 @@
 				847695DD1D25722500D55935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		847695DE1D25722500D55935 /* Build configuration list for PBXNativeTarget "SongTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +504,7 @@
 				847695E01D25722500D55935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		847695E11D25722500D55935 /* Build configuration list for PBXNativeTarget "SongUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +513,7 @@
 				847695E31D25722500D55935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
