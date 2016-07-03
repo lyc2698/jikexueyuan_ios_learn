@@ -69,25 +69,25 @@ class ViewController: UIViewController {
     /** 获取某个目录下所有文件. */
     @IBAction func allFileAtPath(sender: AnyObject) {
         let result = fileManager.allFileAtPath("")
-        print(result)
+        print(result.description())
     }
     
     /** 文件是否存在. */
     @IBAction func fileExist(sender: AnyObject) {
         let result = fileManager.fileExist("fileDictionary")
-        print(result)
+        print(result.description())
     }
     
     /** 计算某个文件大小. */
     @IBAction func fileSize(sender: AnyObject) {
         let result = fileManager.fileSize("fileDictionary")
-        print(result)
+        print(result.description())
     }
     
     /** 计算整个文件夹中所有文件大小. */
     @IBAction func dictionarySize(sender: AnyObject) {
         let result = fileManager.dictionarySize("未命名文件夹")
-        print(result)
+        print(result.description())
     }
     
     /** 删除文件. */

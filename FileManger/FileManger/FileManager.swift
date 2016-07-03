@@ -11,10 +11,11 @@ import UIKit
 /**
  * 文件管理类
  */
-class FileManager: NSObject {
+class FileManager {
     let systemFileManager = NSFileManager.defaultManager();
     //获取 Document 目录
     let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+    var result = Result()
     
     /** 目录创建. */
     func directoryCreate(directoryName: String) -> Bool {
@@ -54,7 +55,6 @@ class FileManager: NSObject {
     }
     
     /** 写内容(字典). */
-    @nonobjc
     func fileWriteContent(fileName: String, content: Dictionary<String, AnyObject>) -> Bool {
         let path = fullPath(documentsPath, fileName: fileName)
         let content = content as NSDictionary
@@ -68,7 +68,6 @@ class FileManager: NSObject {
     }
     
     /** 写内容(数组). */
-    @nonobjc
     func fileWriteContent(fileName: String, content:  Array<AnyObject>) -> Bool {
         let path = fullPath(documentsPath, fileName: fileName)
         let content = content as NSArray
@@ -94,7 +93,6 @@ class FileManager: NSObject {
     }
     
     /** 读内容(字典). */
-    @nonobjc
     func fileReadContent(fileName: String) -> Dictionary<String, AnyObject> {
         let path = fullPath(documentsPath, fileName: fileName)
         var content = Dictionary<String, AnyObject>()
@@ -108,7 +106,6 @@ class FileManager: NSObject {
     
     
     /** 读内容(字典). */
-    @nonobjc
     func fileReadContent(fileName: String) -> Array<AnyObject> {
         let path = fullPath(documentsPath, fileName: fileName)
         var content = Array<AnyObject>()
@@ -121,55 +118,81 @@ class FileManager: NSObject {
     }
     
     /** 获取某个目录下所有文件. */
-    func allFileAtPath(directoryName: String) -> Array<String> {
+    func allFileAtPath(directoryName: String) -> Result {
         let path = fullPath(documentsPath, fileName: directoryName)
         
-        return systemFileManager.subpathsAtPath(path)!
+        //判断是否有该目录/文件
+        let result = fileExist(directoryName)
+        if !result.isSuccess() {
+            return result
+        }
+        
+        return result.success(systemFileManager.subpathsAtPath(path)!)
     }
     
     /** 文件是否存在. */
-    func fileExist(fileName: String) -> Bool {
+    func fileExist(fileName: String) -> Result {
         let path = fullPath(documentsPath, fileName: fileName)
         
-        return systemFileManager.fileExistsAtPath(path)
+        if !systemFileManager.fileExistsAtPath(path) {
+            return result.error(1, msg: "目录不存在", data: false)
+        }
+        
+        return result.success(true)
     }
     
     /** 计算某文件大小(单位字节). */
-    func fileSize(fileName: String) -> Int {
+    func fileSize(fileName: String) -> Result {
         let path = fullPath(documentsPath, fileName: fileName)
         var fileAttributes: AnyObject?
         
-        if systemFileManager.fileExistsAtPath(path) {
-            do{
-                fileAttributes = try systemFileManager.attributesOfItemAtPath(path)
-            } catch {
-                print("计算文件大小异常")
-            }
-            
-            let fileSize:AnyObject? = fileAttributes![NSFileSize]
-            return fileSize as! Int
+        //判断是否有该目录/文件
+        let result = fileExist(fileName)
+        if !result.isSuccess() {
+            return result
         }
         
-        return 0
+        do{
+            fileAttributes = try systemFileManager.attributesOfItemAtPath(path)
+        } catch {
+            print("计算文件大小异常")
+        }
+        
+        let fileSize:AnyObject? = fileAttributes![NSFileSize]
+        return result.success(fileSize as! Int)
     }
     
     /** 计算整个文件夹中所有文件大小. */
-    func dictionarySize(directoryName: String) -> Int {
-        let allFileArray = allFileAtPath(directoryName)
-        var sizeCount = 0
+    func dictionarySize(directoryName: String) -> Result {
+        let allFileArrayResult = allFileAtPath(directoryName)
+        var allFileArray = [String]()
         
+        if allFileArrayResult.isSuccess() {
+            allFileArray = allFileArrayResult.data as! [String]
+        }
+
+        if allFileArray.count == 0 {
+            return result.error(2, msg: "文件夹下无目录或文件")
+        }
+        
+        var sizeCount = 0
         //遍历所有文件
         for filePath in allFileArray {
             //计算每个文件大小
             let fileFullPath = fullPath(directoryName, fileName: filePath)
-            let fileSize = self.fileSize(fileFullPath)
+            let fileSizeResult = self.fileSize(fileFullPath)
+            if !fileSizeResult.isSuccess() {
+                return fileSizeResult
+            }
+            let fileSize = fileSizeResult.data as! Int
+                
             sizeCount += fileSize
             
             print("文件路径: \(fileFullPath)")
             print("文件大小: \(fileSize)")
         }
         
-        return sizeCount
+        return result.success(sizeCount)
     }
     
     /** 删除文件. */
