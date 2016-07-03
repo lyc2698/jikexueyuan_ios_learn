@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dm5-jc-ksd">
+                                <rect key="frame" x="27" y="28" width="60" height="30"/>
+                                <state key="normal" title="创建目录"/>
+                                <connections>
+                                    <action selector="directoryCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Fk-ih-CDt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjb-6D-Gec">
+                                <rect key="frame" x="27" y="66" width="60" height="30"/>
+                                <state key="normal" title="删除目录"/>
+                                <connections>
+                                    <action selector="directoryDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tc9-RC-44L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DyI-UO-mkX">
+                                <rect key="frame" x="26" y="111" width="101" height="30"/>
+                                <state key="normal" title="写内容(字符串)"/>
+                                <connections>
+                                    <action selector="fileWriteText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZ0-Sd-tdM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtA-16-NFl">
+                                <rect key="frame" x="27" y="149" width="86" height="30"/>
+                                <state key="normal" title="写内容(字典)"/>
+                                <connections>
+                                    <action selector="fileWriteDictionary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kF-FQ-SCg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56l-wR-6rj">
+                                <rect key="frame" x="26" y="187" width="86" height="30"/>
+                                <state key="normal" title="写内容(数组)"/>
+                                <connections>
+                                    <action selector="fileWriteArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ThI-Vr-e4L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwP-Ut-ghf">
+                                <rect key="frame" x="143" y="111" width="101" height="30"/>
+                                <state key="normal" title="读内容(字符串)"/>
+                                <connections>
+                                    <action selector="fileReadText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5P-tv-tHG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-po-fxv">
+                                <rect key="frame" x="143" y="149" width="86" height="30"/>
+                                <state key="normal" title="读内容(字典)"/>
+                                <connections>
+                                    <action selector="fileReadDictionary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbw-af-ODJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJE-Wt-m0M">
+                                <rect key="frame" x="143" y="187" width="86" height="30"/>
+                                <state key="normal" title="读内容(数组)"/>
+                                <connections>
+                                    <action selector="fileReadArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XW1-lM-Zrf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7V-0e-C96">
+                                <rect key="frame" x="26" y="225" width="165" height="30"/>
+                                <state key="normal" title="获取某个目录下所有文件"/>
+                                <connections>
+                                    <action selector="allFileAtPath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AV9-6A-7Vd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-ql-hVo">
+                                <rect key="frame" x="27" y="263" width="120" height="30"/>
+                                <state key="normal" title="判断文件是否存在"/>
+                                <connections>
+                                    <action selector="fileExist:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdA-DO-o4t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pl-1v-m6F">
+                                <rect key="frame" x="27" y="301" width="120" height="30"/>
+                                <state key="normal" title="计算某个文件大小"/>
+                                <connections>
+                                    <action selector="fileSize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpb-C1-guL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z65-eT-L6N">
+                                <rect key="frame" x="27" y="339" width="210" height="30"/>
+                                <state key="normal" title="计算整个文件夹中所有文件大小"/>
+                                <connections>
+                                    <action selector="dictionarySize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A7Y-I5-o5U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t59-Bc-mQj">
+                                <rect key="frame" x="27" y="377" width="60" height="30"/>
+                                <state key="normal" title="删除文件"/>
+                                <connections>
+                                    <action selector="fileDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PGi-mx-evZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Y2-Oz-Im3">
+                                <rect key="frame" x="27" y="415" width="60" height="30"/>
+                                <state key="normal" title="移动文件"/>
+                                <connections>
+                                    <action selector="fileMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBD-YX-YMh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347" y="267"/>
+        </scene>
+    </scenes>
+</document>
