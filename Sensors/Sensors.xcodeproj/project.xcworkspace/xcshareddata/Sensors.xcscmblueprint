@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C6D74E2591986F4620653ADF292270ECA0ED6042",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C6D74E2591986F4620653ADF292270ECA0ED6042" : 0,
+    "020D4B1C6090C36A4F38DDD3B0B3B2728890085B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "16F6C3E1-02F5-4CBD-8422-AD5E802EAE97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C6D74E2591986F4620653ADF292270ECA0ED6042" : "jikexueyuan_ios_learn\/",
+    "020D4B1C6090C36A4F38DDD3B0B3B2728890085B" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sensors",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sensors\/Sensors.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.oschina.net:liaoshixiong\/ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "020D4B1C6090C36A4F38DDD3B0B3B2728890085B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lyc2698\/jikexueyuan_ios_learn.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C6D74E2591986F4620653ADF292270ECA0ED6042"
+    }
+  ]
+}
