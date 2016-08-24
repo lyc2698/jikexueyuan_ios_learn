@@ -24,21 +24,27 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate{
     }
     
     func run() {
+        cmm = CMMotionManager.init()
         cmm.accelerometerUpdateInterval = 0.3
         
         if cmm.accelerometerAvailable {
-            cmm.startAccelerometerUpdatesToQueue(myQue, withHandler: { (data: CMAccelerometerData?, error: NSError) in
-                self.rotetePhone(data!)
+            cmm.startAccelerometerUpdatesToQueue(self.myQue,
+                withHandler: {
+                (data: CMAccelerometerData?, err: NSError?) in
+                
+                let x: CGFloat = CGFloat(data!.acceleration.x)
+                let y: CGFloat = CGFloat(data!.acceleration.y)
+                self.gravity.gravityDirection = CGVectorMake(1*x, -1*y)
             })
         }else {
             print("is not available")
         }
+        
+        self.addBall()
     }
     
     func rotetePhone(data: CMAccelerometerData) {
-        let x: Double = data.acceleration.x
-        let y: Double = data.acceleration.y
-        gravity.gravityDirection = CGVectorMake(1*x, -1*y)
+
     }
 
     /** 添加小球到界面. */
@@ -55,7 +61,10 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate{
         self.animator = UIDynamicAnimator.init(referenceView: self.view)
         self.animator.addBehavior(gravity)
         self.animator.addBehavior(collsion)
-        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        cmm.stopAccelerometerUpdates()
     }
     
 }
